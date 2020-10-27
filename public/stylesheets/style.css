@@ -1,8 +1,53 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  font: 54px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: gainsboro;
+  width: 100%;
+  overflow: hidden;
 }
 
 a {
   color: #00B7FF;
+}
+
+.row {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+}
+
+.head {
+  height: 20vh;
+  width: 100%;
+  background-color: dimgrey;
+}
+
+.operators {
+  width: 100%;
+}
+
+.keyboard {
+  width: 100%;
+  height: 100vh;
+}
+
+.button-calc-number {
+  background-color: darkgray;
+  height: 6rem;
+  width: 100%;
+  color: whitesmoke;
+}
+
+.button-calc-operator {
+  background-color: orange;
+  height: 6rem;
+  width: 100%;
+  color: white;
+}
+
+.button-calc-validate {
+   background-color: orange;
+  height: 6rem;
+  width: 100%;
+  color: white;
+  width: 100%;
 }
