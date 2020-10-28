@@ -21,29 +21,6 @@ $(function() {
     let history = $('#history');
     let results = new Array(); 
 
-    function checkDoubleOperator(callback) {
-        let _input = input.text();
-        let lastChar = _input.charAt(_input.length - 1);
-        let hasDoubleOperator = false;
-
-        switch (lastChar) {
-            case '+':
-                break;
-            case '-':
-                break;
-            case '*':
-                break;
-            case '/':
-                break;
-            case '':
-                break;
-            default:
-                return callback;
-                break;
-        }
-
-    }
-
     function store([operation, resultOperation]) {
         let resultsLength = Object.keys(results).length;
         if (resultsLength >= 10) {
@@ -55,8 +32,6 @@ $(function() {
     }
 
     function showHistory(data) {
-        console.log(data);
-        let history = $('#history');
         let _history = new String();
         let arrayHistory = data.split(',');
         arrayHistory.forEach((calc, index) => {
