@@ -10,15 +10,25 @@ a {
   color: #00B7FF;
 }
 
+.app {
+  display: flex;
+  justify-content: space-between;
+}
+
 .row {
   margin-left: 0 auto;
   margin-right: 0 auto;
 }
 
+.calculator {
+  width: 50%;
+}
 .head {
-  height: 20vh;
+  height: 27vh;
   width: 100%;
   background-color: dimgrey;
+  text-align: end;
+  overflow: auto;
 }
 
 .operators {
@@ -50,4 +60,25 @@ a {
   width: 100%;
   color: white;
   width: 100%;
+}
+
+.history-element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.history-element .calc {
+  text-align: end;
+  font-size: 28px;
+}
+
+.history-element .calc-result {
+  font-size: 16px;
+  text-align: end;
+
+}
+
+.history-element .calc-result:before {
+  content: "> ";
 }

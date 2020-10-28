@@ -1,53 +1,61 @@
 <%- include('layouts/header', { headerTitle: "Calculatrice" }) %>
 <%- include('layouts/navbar') %>
 
-<div class="head">
-    <span class="w-100" type="text" id="calc-preview"></span>
-</div>
-<div class="keyboard">
-    <div class="operators">
-        <div class="row">
-            <div class="col-12 d-flex space-content-around">
-                <button id="btn-plus" class="button-calc-operator">+</button>
-                <button id="btn-minus" class="button-calc-operator">-</button>
-                <button id="btn-multiply" class="button-calc-operator">x</button>
-                <button id="btn-divide" class="button-calc-operator">/</button>
-                <button id="btn-clear" class="button-calc-clear">c</button>
+<div class="app">
+    <div class="calculator">
+        <div class="head">
+            <span class="w-100" type="text" id="calc-preview"></span>
+        </div>
+        <div class="keyboard">
+            <div class="operators">
+                <div class="row">
+                    <div class="col-12 d-flex space-content-around">
+                        <button id="btn-plus" class="button-calc-operator">+</button>
+                        <button id="btn-minus" class="button-calc-operator">-</button>
+                        <button id="btn-multiply" class="button-calc-operator">x</button>
+                        <button id="btn-divide" class="button-calc-operator">/</button>
+                        <button id="btn-clear" class="button-calc-clear">c</button>
+                    </div>
+                </div>
+            </div>
+            <div class="numbers">
+                <div class="row">
+                    <div class="col-12 d-flex space-content-around">
+                        <button id="btn-7" class="button-calc-number">7</button>
+                        <button id="btn-8" class="button-calc-number">8</button>
+                        <button id="btn-9" class="button-calc-number">9</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex space-content-around">
+                        <button id="btn-4" class="button-calc-number">4</button>
+                        <button id="btn-5" class="button-calc-number">5</button>
+                        <button id="btn-6" class="button-calc-number">6</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex space-content-around">
+                        <button id="btn-1" class="button-calc-number">1</button>
+                        <button id="btn-2" class="button-calc-number">2</button>
+                        <button id="btn-3" class="button-calc-number">3</button>
+                    </div>
+                </div>
+            </div>
+            <div class="button-calc-validate">
+                <div class="row">
+                    <div class="col-12 d-flex space-content-around">
+                        <button id="btn-comma" class="button-calc-number">,</button>
+                        <button id="btn-0" class="button-calc-number">0</button>
+                        <button id="btn-validate" class="button-calc-validate">=</button>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="numbers">
-        <div class="row">
-            <div class="col-12 d-flex space-content-around">
-                <button id="btn-7" class="button-calc-number">7</button>
-                <button id="btn-8" class="button-calc-number">8</button>
-                <button id="btn-9" class="button-calc-number">9</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 d-flex space-content-around">
-                <button id="btn-4" class="button-calc-number">4</button>
-                <button id="btn-5" class="button-calc-number">5</button>
-                <button id="btn-6" class="button-calc-number">6</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 d-flex space-content-around">
-                <button id="btn-1" class="button-calc-number">1</button>
-                <button id="btn-2" class="button-calc-number">2</button>
-                <button id="btn-3" class="button-calc-number">3</button>
-            </div>
-        </div>
-    </div>
-    <div class="button-calc-validate">
-        <div class="row">
-            <div class="col-12 d-flex space-content-around">
-                <button id="btn-comma" class="button-calc-number">,</button>
-                <button id="btn-0" class="button-calc-number">0</button>
-                <button id="btn-validate" class="button-calc-validate">=</button>
-                
-            </div>
-        </div>
+
+    <div class="history" id="history">
+
     </div>
 </div>
 

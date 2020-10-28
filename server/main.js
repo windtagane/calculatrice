@@ -8,8 +8,8 @@ export default class ElectronApp {
 
     createWindow() {
         this.window = new electron.BrowserWindow({
-            width: 400,
-            height: 640,
+            width: 800,
+            height: 700,
             frame: true,
             resizable: false
         });

@@ -18,6 +18,8 @@ $(function() {
     let btn_validate = $('#btn-validate');
     let btn_clear = $('#btn-clear');
     let input = $('#calc-preview');
+    let history = $('#history');
+    let results = new Array(); 
 
     function checkDoubleOperator(callback) {
         let _input = input.text();
@@ -40,6 +42,34 @@ $(function() {
                 break;
         }
 
+    }
+
+    function store([operation, resultOperation]) {
+        let resultsLength = Object.keys(results).length;
+        if (resultsLength >= 10) {
+            results.splice(0, 1);
+        } 
+        results.push([operation, resultOperation]);
+
+        localStorage.setItem('calcs', results);
+    }
+
+    function showHistory(data) {
+        console.log(data);
+        let history = $('#history');
+        let _history = new String();
+        let arrayHistory = data.split(',');
+        arrayHistory.forEach((calc, index) => {
+            if (index % 2 == 0) {
+                _history += `
+                <div class="history-element">
+                    <span class="calc">${arrayHistory[index]}</span>
+                    <span class="calc-result">${arrayHistory[index+1]}</span>
+                </div>
+                `;
+            }
+        });
+        history.html(_history);
     }
     
     btn_0.on('click', function() {
@@ -89,11 +119,11 @@ $(function() {
     })
     btn_validate.on('click', function() {
         let result = eval(input.text());
-        localStorage.setItem('calc', [input.text(), result]);
-        console.log(localStorage);
+        store([input.text(), result]);
         input.html(result);
+        showHistory(localStorage.calcs);
     })
     btn_clear.on('click', function() {
         input.html('');
-    })
+    })    
 })
