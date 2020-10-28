@@ -12,6 +12,7 @@
     "transpile-server": "babel ./server --out-dir dist/server",
     "transpile-src": "babel ./src --out-dir dist/src",
     "transpile": "npm-run-all transpile-server transpile-src",
+    "compile": "electron-packager . calculatrice --platform=win32 --arch=x64",
     "clean": "rimraf dist"
   },
   "babel": {
