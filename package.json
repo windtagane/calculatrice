@@ -2,6 +2,7 @@
   "name": "calculatrice",
   "version": "0.0.1",
   "private": true,
+  "main": "./dist/server/bin/www.js",
   "scripts": {
     "build": "npm-run-all clean transpile",
     "start-electron": "electron ./dist/server/bin/www.js",
@@ -37,6 +38,7 @@
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0"
+    "@babel/cli": "^7.0.0",
+    "electron-packager": "^15.1.0"
   }
 }
